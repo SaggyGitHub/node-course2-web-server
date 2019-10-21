@@ -42,7 +42,13 @@ app.get('/about', (req, res) => {
         pageTitle: 'About Page',
         currentYear: new Date().getFullYear()
     });
-})
+});
+
+app.get('/page/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects'
+    });
+});
 
 app.get('/bad', (req, res) => {
     res.send({
